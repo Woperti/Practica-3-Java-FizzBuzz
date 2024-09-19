@@ -32,16 +32,22 @@ Usar el operador module %
             String expected = (String) testCases[i][1];
             String result = fizzbuzz(input);
             
+            System.out.println("Test case " + (i + 1) + ":");
+            System.out.println("Tu resultado es: " + result);
+            System.out.println("La salida esperada es: " + expected);
+            
             if (!result.equals(expected)) {
-                System.out.println("Test case " + (i + 1) + " failed: fizzbuzz(" + input + ") should be '" + expected + "', but got '" + result + "'");
+                System.out.println("Test case not passed");
             } else {
-                System.out.println("Test case " + (i + 1) + " passed.");
+                System.out.println("Test case passed");
             }
+
+            System.out.println(); 
         }
     }
 
     public static void main(String[] args) {
-        testFizzBuzz(); 
+        testFizzBuzz();  
     }
 }
 ```
